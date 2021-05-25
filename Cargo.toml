@@ -1,0 +1,18 @@
+[package]
+name = "kmip-client"
+version = "0.1.0"
+authors = ["Ximon Eighteen <3304436+ximon18@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+log = "0.4.14"
+hex = "0.4.3"
+num = "0.4"
+kmip = { git = "https://github.com/ximon18/kmip", tag = "v0.2.1", version = "0.2.1" }
+openssl = "0.10.34"
+stderrlog = { version = "0.5.1", optional = true }
+structopt = { version = "0.3.21", optional = true }
+
+[features]
+default = []
+cli = [ "stderrlog", "structopt" ]
